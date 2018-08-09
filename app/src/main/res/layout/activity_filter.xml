@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".FilterActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/controls"
+        android:layout_alignParentTop="true">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_30sdp"
+            android:scaleType="centerCrop"
+            app:civ_border_color="@color/colorActionBorder"
+            app:civ_border_width="@dimen/_5sdp"
+            android:src="@drawable/image"/>
+        
+        <ImageButton
+            android:id="@+id/action_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha=".5"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/controls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_90sdp"
+            android:layout_gravity="bottom"
+            android:scrollbars="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/view_normal"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_90sdp"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_2sdp"
+                    android:tag="NORMAL">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/image_normal"
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:src="@drawable/image"
+                        android:tag="NORMAL"
+                        app:civ_border_color="@color/colorActionCenter"
+                        app:civ_border_width="@dimen/_2sdp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_1sdp"
+                        android:text="Normal"
+                        android:textColor="@color/colorBlack"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/view_gray"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_90sdp"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_2sdp"
+                    android:tag="GRAY">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/image_gray"
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:src="@drawable/image"
+                        android:tag="GRAY"
+                        app:civ_border_color="@color/colorBlackTransparent_0"
+                        app:civ_border_width="@dimen/_2sdp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_1sdp"
+                        android:text="Gray"
+                        android:textColor="@color/colorBlack"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/view_relief"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_90sdp"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_2sdp"
+                    android:tag="RELIEF">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/image_relief"
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:src="@drawable/image"
+                        android:tag="RELIEF"
+                        app:civ_border_color="@color/colorBlackTransparent_0"
+                        app:civ_border_width="@dimen/_2sdp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_1sdp"
+                        android:text="Relief"
+                        android:textColor="@color/colorBlack"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/view_neon"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_90sdp"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_2sdp"
+                    android:tag="NEON">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/image_neon"
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:src="@drawable/image"
+                        android:tag="NEON"
+                        app:civ_border_color="@color/colorBlackTransparent_0"
+                        app:civ_border_width="@dimen/_2sdp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_1sdp"
+                        android:text="NEON"
+                        android:textColor="@color/colorBlack"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/view_invert"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_90sdp"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_2sdp"
+                    android:tag="INVERT">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/image_invert"
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:src="@drawable/image"
+                        android:tag="INVERT"
+                        app:civ_border_color="@color/colorBlackTransparent_0"
+                        app:civ_border_width="@dimen/_2sdp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_1sdp"
+                        android:text="Invert"
+                        android:textColor="@color/colorBlack"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/view_sketch"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_90sdp"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_2sdp"
+                    android:tag="SKETCH">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/image_sketch"
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:src="@drawable/image"
+                        android:tag="SKETCH"
+                        app:civ_border_color="@color/colorBlackTransparent_0"
+                        app:civ_border_width="@dimen/_2sdp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_1sdp"
+                        android:text="Sketch"
+                        android:textColor="@color/colorWhite"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/view_normal"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_96sdp"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:background="@color/colorBlackTransparent_40"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_2sdp"
+                    android:tag="NORMAL">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/image_normal"
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:src="@drawable/image"
+                        android:tag="NORMAL"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_1sdp"
+                        android:text="Normal"
+                        android:textColor="@color/colorWhite"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/view_gray"
+                    android:layout_width="@dimen/_96sdp"
+                    android:layout_height="@dimen/_96sdp"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:background="@color/colorBlackTransparent_40"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_2sdp"
+                    android:tag="GRAY">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/image_gray"
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:src="@drawable/image"
+                        android:tag="GRAY"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_1sdp"
+                        android:text="Gray"
+                        android:textColor="@color/colorWhite"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/view_relief"
+                    android:layout_width="@dimen/_96sdp"
+                    android:layout_height="@dimen/_96sdp"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:background="@color/colorBlackTransparent_40"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_2sdp"
+                    android:tag="RELIEF">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/image_relief"
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:src="@drawable/image"
+                        android:tag="RELIEF"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_1sdp"
+                        android:text="Relief"
+                        android:textColor="@color/colorWhite"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/view_neon"
+                    android:layout_width="@dimen/_96sdp"
+                    android:layout_height="@dimen/_96sdp"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:background="@color/colorBlackTransparent_40"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_2sdp"
+                    android:tag="NEON">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/image_neon"
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:src="@drawable/image"
+                        android:tag="NEON"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_1sdp"
+                        android:text="NEON"
+                        android:textColor="@color/colorWhite"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/view_invert"
+                    android:layout_width="@dimen/_96sdp"
+                    android:layout_height="@dimen/_96sdp"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:background="@color/colorBlackTransparent_40"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_2sdp"
+                    android:tag="INVERT">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/image_invert"
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:src="@drawable/image"
+                        android:tag="INVERT"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_1sdp"
+                        android:text="Invert"
+                        android:textColor="@color/colorWhite"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/view_sketch"
+                    android:layout_width="@dimen/_96sdp"
+                    android:layout_height="@dimen/_96sdp"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:background="@color/colorBlackTransparent_40"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_2sdp"
+                    android:tag="SKETCH">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/image_sketch"
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:src="@drawable/image"
+                        android:tag="SKETCH"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_1sdp"
+                        android:text="Sketch"
+                        android:textColor="@color/colorWhite"
+                        />
+                </LinearLayout>
+            </LinearLayout>-->
+        </HorizontalScrollView>
+
+        <Button
+            android:id="@+id/action_launch"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_15sdp"
+            android:background="@drawable/bg_action_button"
+            android:text="LAUNCH"
+            android:textColor="@color/colorWhite"
+            />
+    </LinearLayout>
+</RelativeLayout>
